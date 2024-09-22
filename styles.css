@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  background-image: url(images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: center bottom -30%;
+  min-height: 100vh;
+  background-size: contain;
+  background-color: hsl(229, 57%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+.images {
+  padding: 35px 80px 20px 20px;
+  background: hsl(228, 56%, 26%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px 50px 5px 5px;
+  gap: 25px;
+  max-width: 220px;
+}
+.images .logo {
+  width: 60%;
+}
+.images .icons {
+  display: flex;
+  justify-content: space-between;
+}
+.images .icons img {
+  padding: 8px;
+  background-color: hsl(229, 57%, 11%);
+  width: 30px;
+  height: 31px;
+  border-radius: 5px;
+}
+.des {
+  position: relative;
+  padding: 20px;
+  background: hsl(228, 56%, 26%);
+  color: hsl(243, 100%, 93%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+}
+.des p {
+  font-weight: 400;
+}
+.des span {
+  font-weight: 700;
+}
+.progress {
+  width: 100%;
+  height: 15px;
+  border-radius: 50px;
+  border: 2px solid hsl(229, 57%, 11%);
+  background: hsl(229, 57%, 11%);
+  overflow: hidden;
+}
+.progress .progress-in {
+  position: relative;
+  border-radius: 50px;
+  height: 98%;
+  width: 80%;
+  background-image: linear-gradient(
+    to left,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+}
+.progress .progress-in::after {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  top: 1.4px;
+  right: 2px;
+  background: white;
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info span {
+  font-weight: 700;
+}
+.chat {
+  position: absolute;
+  padding: 15px 20px;
+
+  background: white;
+  color: hsl(229, 57%, 11%);
+  right: 10px;
+  top: -50px;
+  border-radius: 10px;
+}
+.chat p {
+  color: hsl(229, 7%, 55%);
+  font-weight: 700;
+}
+.chat span {
+  font-size: 24px;
+  font-weight: 700;
+}
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.content::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: 20px solid;
+
+  border-color: transparent white transparent transparent;
+  bottom: -36px;
+  right: -20px;
+}
+@media screen and (max-width: 376px) {
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    margin: auto 30px;
+  }
+  .des {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .images {
+    padding: 35px 80px 20px 40px;
+    max-width: 100%;
+    width: 100%;
+  }
+  .images .icons img {
+    padding: 15px;
+    width: 55px;
+    height: 55px;
+  }
+  .images .icons {
+    justify-content: start;
+    gap: 15px;
+  }
+  .progress {
+    height: 20px;
+  }
+  .progress .progress-in::after {
+ 
+    height: 12px;
+    width: 12px;
+}
+  .des p {
+    text-align: center;
+  }
+
+  .chat {
+    right: 95px;
+    top: 110px;
+  }
+  .content::after {
+    content: none;
+  }
+}
